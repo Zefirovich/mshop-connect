@@ -2,41 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Corporate Design System for MSHOP Commercial Brokers */
 
 @layer base {
   :root {
+    /* Corporate Color Palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 213 27% 15%;
+    
+    /* Card and Surface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 213 27% 15%;
+    --surface: 210 11% 98%;
+    --surface-foreground: 213 27% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Corporate Navy Primary */
+    --primary: 213 86% 26%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 213 86% 22%;
+    --primary-light: 213 86% 96%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Professional Secondary */
+    --secondary: 213 13% 93%;
+    --secondary-foreground: 213 27% 25%;
+    
+    /* Neutral Greys */
+    --muted: 210 11% 96%;
+    --muted-foreground: 213 13% 45%;
+    --subtle: 210 11% 98%;
+    --subtle-foreground: 213 13% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Accent Colors */
+    --accent: 213 86% 26%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 213 86% 96%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Border and Input */
+    --border: 213 13% 88%;
+    --border-light: 213 13% 92%;
+    --input: 213 13% 88%;
+    --input-focus: 213 86% 26%;
+    --ring: 213 86% 26%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Status Colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Corporate Gradients */
+    --gradient-corporate: linear-gradient(135deg, hsl(213 86% 26%), hsl(213 86% 22%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 11% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(213 86% 26% / 0.95), hsl(213 86% 22% / 0.95));
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Corporate Shadows */
+    --shadow-corporate: 0 4px 24px -6px hsl(213 86% 26% / 0.15);
+    --shadow-subtle: 0 2px 8px -2px hsl(213 13% 45% / 0.1);
+    --shadow-elevated: 0 8px 32px -8px hsl(213 86% 26% / 0.2);
 
+    /* Typography Scale */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+
+    /* Spacing Scale */
+    --space-xs: 0.5rem;
+    --space-sm: 0.75rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    /* Border Radius */
     --radius: 0.5rem;
+    --radius-sm: 0.25rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +153,96 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  /* Corporate Section Spacing */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Corporate Typography */
+  .heading-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  .heading-section {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  .heading-subsection {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  .body-large {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+
+  .body-base {
+    @apply text-base leading-relaxed;
+  }
+
+  /* Corporate Cards */
+  .card-corporate {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-subtle)] 
+           hover:shadow-[var(--shadow-corporate)] transition-all duration-300;
+  }
+
+  .card-elevated {
+    @apply bg-card border border-border rounded-lg shadow-[var(--shadow-elevated)]
+           hover:shadow-[var(--shadow-elevated)] transition-all duration-300;
+  }
+
+  /* Corporate Buttons */
+  .btn-corporate {
+    @apply bg-[var(--gradient-corporate)] text-primary-foreground 
+           hover:shadow-[var(--shadow-corporate)] transform hover:-translate-y-0.5
+           transition-all duration-300 font-medium;
+  }
+
+  .btn-outline-corporate {
+    @apply border-2 border-primary text-primary bg-transparent
+           hover:bg-primary hover:text-primary-foreground
+           transition-all duration-300 font-medium;
+  }
+
+  /* Focus States */
+  .focus-corporate {
+    @apply focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+           focus:ring-offset-background;
+  }
+
+  /* Corporate Gradients */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-subtle {
+    background: var(--gradient-subtle);
   }
 }
