@@ -1,4 +1,5 @@
 import { Search, Users, TrendingUp, FileText, Handshake, Settings } from "lucide-react";
+import businessDocuments from "@/assets/business-documents.jpg";
 
 export const Services = () => {
   const services = [
@@ -45,10 +46,19 @@ export const Services = () => {
       <div className="max-w-6xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="heading-section mb-6">Our Services</h2>
-          <p className="body-large text-muted-foreground max-w-3xl mx-auto">
+          <p className="body-large text-muted-foreground max-w-3xl mx-auto mb-8">
             Comprehensive commercial brokerage services designed to streamline B2B transactions 
             and facilitate successful business partnerships across global markets.
           </p>
+          
+          {/* Service Image */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <img 
+              src={businessDocuments} 
+              alt="Professional business documentation and contract services" 
+              className="rounded-lg shadow-[var(--shadow-elevated)] w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -14,7 +14,7 @@ export const Footer = () => {
             and business development coordination.
           </p>
           <div className="mt-4 text-xs text-muted-foreground">
-            <span>Company Registration: [TL-000000]</span>
+            <span>License Number: 1427412 | TRN: 104951360700001</span>
           </div>
         </div>
 
@@ -40,7 +40,8 @@ export const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm text-background/80">
-              <p>Dubai, UAE</p>
+              <p>Office 1317, The Binary Tower by Omniyat</p>
+              <p>Business Bay, Dubai, UAE</p>
               <p>+971-54-543-7718</p>
               <p>mshopcb@gmail.com</p>
             </div>

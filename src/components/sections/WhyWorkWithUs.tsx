@@ -1,4 +1,5 @@
 import { Shield, Zap, FileCheck, Lock, MapPin, DollarSign } from "lucide-react";
+import dubaiBusiness from "@/assets/dubai-business.jpg";
 
 export const WhyWorkWithUs = () => {
   const benefits = [
@@ -39,10 +40,19 @@ export const WhyWorkWithUs = () => {
       <div className="max-w-6xl mx-auto container-padding">
         <div className="text-center mb-16">
           <h2 className="heading-section mb-6">Why Work With Us</h2>
-          <p className="body-large text-muted-foreground max-w-3xl mx-auto">
+          <p className="body-large text-muted-foreground max-w-3xl mx-auto mb-8">
             Our commitment to excellence, transparency, and results sets us apart 
             in the commercial brokerage industry.
           </p>
+          
+          {/* Dubai Business Image */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <img 
+              src={dubaiBusiness} 
+              alt="Dubai business district skyline and commercial environment" 
+              className="rounded-lg shadow-[var(--shadow-elevated)] w-full h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

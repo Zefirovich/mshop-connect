@@ -77,7 +77,8 @@ export const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold">Address</p>
-                    <p className="text-muted-foreground">Dubai, UAE</p>
+                    <p className="text-muted-foreground">Office 1317, The Binary Tower by Omniyat</p>
+                    <p className="text-muted-foreground">Business Bay, Dubai, UAE</p>
                   </div>
                 </div>
               </div>

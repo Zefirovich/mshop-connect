@@ -1,4 +1,5 @@
 import { Globe, Shield, Clock, FileCheck } from "lucide-react";
+import businessPartnership from "@/assets/business-partnership.jpg";
 
 export const About = () => {
   const highlights = [
@@ -27,20 +28,32 @@ export const About = () => {
   return (
     <section className="section-padding bg-subtle">
       <div className="max-w-6xl mx-auto container-padding">
-        <div className="text-center mb-16">
-          <h2 className="heading-section mb-6">About MSHOP Commercial Brokers</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="body-large text-muted-foreground mb-6">
-              Dubai-registered commercial broker with international reach, providing sector-agnostic 
-              brokerage services with emphasis on discretion, timelines, and documentation quality. 
-              We facilitate B2B connections and coordinate complex commercial transactions across 
-              global markets while maintaining the highest standards of professional integrity.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center text-muted-foreground">
-              <span>Trade License № [TL-000000]</span>
-              <span className="hidden sm:inline">•</span>
-              <span>Established 2024</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div>
+            <h2 className="heading-section mb-6">About MSHOP Commercial Brokers</h2>
+            <div className="max-w-4xl">
+              <p className="body-large text-muted-foreground mb-6">
+                MShop is a Dubai-based commercial brokerage company providing comprehensive brokerage 
+                and consulting services for businesses. We assist with process organization, partnership 
+                development, and commercial operations. We operate in full compliance with UAE laws and 
+                regulations, providing our clients with a legally secure environment for their commercial activities.
+                Our workflow is designed to be clear and straightforward with a personalized approach 
+                tailored to your specific business needs and goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 text-muted-foreground">
+                <span>License Number: 1427412</span>
+                <span className="hidden sm:inline">•</span>
+                <span>TRN: 104951360700001</span>
+              </div>
             </div>
+          </div>
+          
+          <div className="relative">
+            <img 
+              src={businessPartnership} 
+              alt="Professional business partnership in Dubai" 
+              className="rounded-lg shadow-[var(--shadow-elevated)] w-full h-auto"
+            />
           </div>
         </div>
 
